@@ -18,3 +18,27 @@ dir_prob <- function(x) {
   pr <- t[[obs]] / (sum(t) - 1 + length(levels(x)))
   return(pr)
 }
+
+
+#' Compute Dirchlet Probability of Last Item in a Sequence
+#' @description
+#' A general case of@seealso [dir_prob()]
+#' @param x The sequence
+#' @param n Number of element from the end of the sequence to consider (0 or 1)
+#' @param k Which element to calculate the probability for
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' dir_prob(factor(c(1), levels = 1:3)) == dir_prob1(factor(c(1), levels = 1:3))
+dir_prob1 <- function(x, n=1, k=-1) {
+  if (k == -1){
+    obs <- x[length(x)]
+  }else{
+    obs <- k
+  }
+  t <- table(x[1:length(x)-n])
+  pr <- (t[[obs]]+1) / (length(x) - n + length(levels(x)))
+  return(pr)
+}
