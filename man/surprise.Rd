@@ -7,7 +7,7 @@
 surprise(x)
 }
 \arguments{
-\item{x}{}
+\item{x}{The sequence passed as a Factor}
 }
 \value{
 Information in bits
@@ -21,7 +21,7 @@ Note that the probability \eqn{p(x^{j} = k | X^{j-1}, \alpha)} is the definition
 for Dirichlet probability seen in
 }
 \examples{
-surprise(factor(x, levels = 1:3))
+surprise(factor(c(1), levels = 1:3))
 }
 \seealso{
 \code{\link[=dir_prob]{dir_prob()}}

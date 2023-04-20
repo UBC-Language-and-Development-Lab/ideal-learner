@@ -8,8 +8,6 @@ dir_prob(x)
 }
 \arguments{
 \item{x}{The sequence passed as a Factor}
-
-\item{alpha}{smoothing factor applied to counts}
 }
 \value{
 Probability of seeing the last item in the sequence given the preceding elements
@@ -20,5 +18,5 @@ The probability of observing the last (jth) element in a sequence.
 \eqn{p(x^{j} = k | X^{j-1}, \alpha) = \frac{n_{k}^{j-1}+1}{j-1+K}}
 }
 \examples{
-dir_prob(factor(x, levels = 1:3))
+dir_prob(factor(c(1), levels = 1:3))
 }

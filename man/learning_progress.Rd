@@ -26,5 +26,5 @@ hence, it is a suitable way to model learning progress (Poli et al, 2020)
 learning_progress(factor(c(1), levels = 1:3))
 }
 \seealso{
-\link{dir_prob(), dir_prob1}
+\code{\link[=dir_prob]{dir_prob()}},\code{\link[=dir_prob1]{dir_prob1()}}
 }
