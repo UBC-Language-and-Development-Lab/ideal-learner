@@ -5,13 +5,12 @@
 #' \eqn{p(x^{j} = k | X^{j-1}, \alpha) = \frac{n_{k}^{j-1}+1}{j-1+K}}
 #'
 #' @param x The sequence passed as a Factor
-#' @param alpha smoothing factor applied to counts
 #'
 #' @return Probability of seeing the last item in the sequence given the preceding elements
 #' @export
 #'
 #' @examples
-#' dir_prob(factor(x, levels = 1:3))
+#' dir_prob(factor(c(1), levels = 1:3))
 dir_prob <- function(x) {
   stopifnot("Input must be factor" = class(x) == "factor")
   stopifnot("Length must be non-0" = length(x) > 0)
@@ -19,7 +18,7 @@ dir_prob <- function(x) {
   # we are interested in calculating p for the last element
   obs <- x[length(x)]
   # we use only past values
-  t <- table(head(x, length(x) - 1))
+  t <- table(utils::head(x, length(x) - 1))
   # nK is the sum of the prior: alpha = [a_1, ... a_n]
   # where a_1 ... a_n all start equal to 1
   nK <- length(levels(x))
@@ -51,7 +50,7 @@ dir_prob1 <- function(x, n=1, k=-1) {
   }else{
     obs <- k
   }
-  t <- table(head(x, length(x) - n))
+  t <- table(utils::head(x, length(x) - n))
   pr <- (t[[obs]] + 1) / (length(x) - n + length(levels(x)))
   return(pr)
 }

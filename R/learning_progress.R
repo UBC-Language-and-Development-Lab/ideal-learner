@@ -9,9 +9,9 @@
 #' at trial j and a weighted average of prediction error at trial j − 1, and
 #' hence, it is a suitable way to model learning progress (Poli et al, 2020)
 #'
-#' @seealso [dir_prob(), dir_prob1]
+#' @seealso [dir_prob()],[dir_prob1()]
 #'
-#'
+#' @seealso
 #' @param x a `factor` representing an observed sequence.
 #'
 #' @return Estimate of learning progress

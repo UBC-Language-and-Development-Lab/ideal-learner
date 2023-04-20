@@ -9,13 +9,13 @@
 #' for Dirichlet probability seen in
 #' @seealso [dir_prob()]
 #'
-#' @param x
+#' @param x The sequence passed as a Factor
 #'
 #' @return Information in bits
 #' @export
 #'
 #' @examples
-#' surprise(factor(x, levels = 1:3))
+#' surprise(factor(c(1), levels = 1:3))
 surprise <- function(x){
   -log2(dir_prob(x))
 }
