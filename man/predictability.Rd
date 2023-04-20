@@ -7,7 +7,7 @@
 predictability(x)
 }
 \arguments{
-\item{x}{}
+\item{x}{The sequence of type Factor with specified levels}
 }
 \value{
 Predictability score
@@ -15,7 +15,7 @@ Predictability score
 \description{
 Predictability is quantified it terms of negative entropy
 
-\eqn{-H(p^{j}) = \sum_{k=1}^{K}p(x^j = k|X^j , \alpha)log_{2}p(x^j = k|X^j , \alpha)}
+\eqn{-H(p^{j}) = \sum_{k=1}^{K}p(x^j = k|X^j, \alpha)\log_{2}p(x^j = k|X^j, \alpha)}
 
 Note that, different from surprise, here, predictability is estimated considering also the event j, and not just up to j − 1
 

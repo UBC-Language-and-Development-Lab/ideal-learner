@@ -19,3 +19,7 @@
 surprise <- function(x){
   -log2(dir_prob(x))
 }
+
+ssurprise <- function(x) {
+  sapply(1:length(x), \(i) surprise(x[1:i]))
+}

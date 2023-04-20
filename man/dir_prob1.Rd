@@ -13,6 +13,9 @@ dir_prob1(x, n = 1, k = -1)
 
 \item{k}{Which element to calculate the probability for}
 }
+\value{
+Probability of seeing item \code{k} in the sequence given the preceding elements up to \code{n} elements from the end
+}
 \description{
 A general case of@seealso \code{\link[=dir_prob]{dir_prob()}}
 }
