@@ -19,7 +19,7 @@ Predictability is quantified it terms of negative entropy
 
 Note that, different from surprise, here, predictability is estimated considering also the event j, and not just up to j − 1
 
-\eqn{p(x^j=k)} values are calculated in @seealso \code{\link[=dir_prob1]{dir_prob1()}}
+\eqn{p(x^j=k)} values are calculated in \code{\link[=prob_target]{prob_target()}}
 }
 \examples{
 predictability(factor(c(1), levels = 1:3))

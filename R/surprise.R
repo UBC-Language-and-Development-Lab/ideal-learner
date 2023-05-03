@@ -7,7 +7,7 @@
 #'
 #' Note that the probability \eqn{p(x^{j} = k | X^{j-1}, \alpha)} is the definition
 #' for Dirichlet probability seen in
-#' @seealso [dir_prob()]
+#' @seealso [prob_target()]
 #'
 #' @param x The sequence passed as a Factor
 #'
@@ -16,8 +16,8 @@
 #'
 #' @examples
 #' surprise(factor(c(1), levels = 1:3))
-surprise <- function(x){
-  -log2(dir_prob(x))
+surprise <- function(x) {
+  -log2(prob_target(x))
 }
 
 ssurprise <- function(x) {

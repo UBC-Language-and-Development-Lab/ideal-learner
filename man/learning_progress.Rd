@@ -16,7 +16,7 @@ Estimate of learning progress
 Learning progress is quantified in terms of Kullback-Leibler Divergence
 (or information gain), \eqn{D_{KL}}:
 
-\eqn{D_{KL}=(p^j|p^{j-1}) \sum_{k=1}^{K}p(x^j=k|X^j,\alpha)\log_{2}\frac{p(x^j=k|X^j,\alpha)}{p(x^j=k|X^{j-1},\alpha)}}
+\eqn{D_{KL}=(p^j|p^{j-1}) \sum_{k=1}^{K}p(x^j=k|X^j, \alpha)\log_{2}\frac{p(x^j=k|X^j,\alpha)}{p(x^j=k|X^{j-1}, \alpha)}}
 
 \eqn{D_{KL}} is the divergence between a weighted average of prediction error
 at trial j and a weighted average of prediction error at trial j − 1, and
@@ -26,5 +26,5 @@ hence, it is a suitable way to model learning progress (Poli et al, 2020)
 learning_progress(factor(c(1), levels = 1:3))
 }
 \seealso{
-\code{\link[=dir_prob]{dir_prob()}},\code{\link[=dir_prob1]{dir_prob1()}}
+\code{\link[=prob_target]{prob_target()}}, \code{\link[=prob_target1]{prob_target1()}}
 }
