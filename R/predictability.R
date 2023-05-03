@@ -7,7 +7,7 @@
 #'
 #' Note that, different from surprise, here, predictability is estimated considering also the event j, and not just up to j − 1
 #'
-#' \eqn{p(x^j=k)} values are calculated in @seealso [dir_prob1()]
+#' \eqn{p(x^j=k)} values are calculated in [prob_target()]
 #'
 #' @param x The sequence of type Factor with specified levels
 #'
@@ -16,11 +16,11 @@
 #'
 #' @examples
 #' predictability(factor(c(1), levels = 1:3))
-predictability <- function(x){
+predictability <- function(x) {
   nK <- length(levels(x))
   sum(sapply(
     1:nK,
-    (\(k) dir_prob1(x, 0, k) * log2(dir_prob1(x, 0, k)))
+    (\(k) prob_target1(x, 0, k) * log2(prob_target1(x, 0, k)))
   ))
 }
 

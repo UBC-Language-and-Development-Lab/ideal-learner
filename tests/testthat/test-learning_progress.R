@@ -1,3 +1,6 @@
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+test_that("sapply works", {
+  expect_equal(
+    slearning_progress(factor(c(1,1), levels = 1:3)),
+    c(learning_progress(factor(c(1), levels = 1:3)), learning_progress(factor(c(1,1), levels = 1:3)))
+  )
 })

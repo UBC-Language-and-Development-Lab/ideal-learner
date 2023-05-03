@@ -24,5 +24,5 @@ for Dirichlet probability seen in
 surprise(factor(c(1), levels = 1:3))
 }
 \seealso{
-\code{\link[=dir_prob]{dir_prob()}}
+\code{\link[=prob_target]{prob_target()}}
 }
